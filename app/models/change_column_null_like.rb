@@ -1,0 +1,2 @@
+class ChangeColumnNullLike < ApplicationRecord
+end

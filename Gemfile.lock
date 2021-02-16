@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/faker-ruby/faker.git
+  revision: 95302b6d4f627a8b5747a9817957e648eef110f5
+  branch: master
+  specs:
+    faker (2.16.0)
+      i18n (>= 1.6, < 2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -170,6 +178,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    table_print (1.5.7)
     thor (1.1.0)
     tilt (2.0.10)
     turbolinks (5.2.1)
@@ -205,6 +214,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
   capybara (>= 3.26)
+  faker!
   jbuilder (~> 2.7)
   listen (~> 3.3)
   pg (~> 1.1)
@@ -214,6 +224,7 @@ DEPENDENCIES
   sass-rails (>= 6)
   selenium-webdriver
   spring
+  table_print
   turbolinks (~> 5)
   tzinfo-data
   web-console (>= 4.1.0)
