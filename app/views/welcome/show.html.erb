@@ -4,8 +4,9 @@
 
 <p>Here are all of our gossips:</p>
 
+  <div class="row">
     <% Gossip.all.each do | gossip | %>
-      <div class="card text-white bg-info mb-3" style="width: 18rem;">
+      <div class="card text-white bg-info m-3" style="width: 18rem;">
         <div class="card-body">
           <h5 class="card-title"><%= User.find_by(id: gossip.user_id).first_name %></h5>
           <p class="card-text"><%= gossip.title %></p>
@@ -13,3 +14,6 @@
         </div>
       </div>
     <% end %>
+  </div>
+
+</body>
