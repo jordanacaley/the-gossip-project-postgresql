@@ -1,0 +1,5 @@
+<h1><%= User.find(params[:id]).first_name %></h1>
+<p>Age: <%= User.find(params[:id]).age %></p>
+<p>City: <%= City.find_by(id: User.find(params[:id]).city_id).name %></p>
+<p>Description: <%= User.find(params[:id]).description %></p>
+<p>Member since: <%= User.find(params[:id]).created_at %></p>

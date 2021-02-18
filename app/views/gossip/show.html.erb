@@ -1,5 +1,5 @@
 <h1>Gossip <%= params[:id] %></h1>
-<p>Author: <%= User.find_by(id: Gossip.find(params[:id]).user_id).first_name%></p>
+<p>Author: <%= User.find_by(id: Gossip.find(params[:id]).user_id).first_name%> <%= link_to "View", user_path(@id = Gossip.find(params[:id]).user_id) %></p>
 <p>Title: <%= Gossip.find(params[:id]).title %></p>
 <p>Content: <%= Gossip.find(params[:id]).content %></p>
 <p>Created: <%= Gossip.find(params[:id]).created_at %></p>
