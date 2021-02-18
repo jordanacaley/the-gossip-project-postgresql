@@ -1,24 +1,8 @@
-# README
+# The Gossip Project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project uses Ruby on Rails and PostgreSQL to build a relational database of users and gossips.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. Download the code
+2. Position yourself in the folder and run ```bundle install``` in your terminal
+3. Run ```rails server``` in your terminal
+4. Visit http://localhost:3000/welcome/your-name to view the gossips!
