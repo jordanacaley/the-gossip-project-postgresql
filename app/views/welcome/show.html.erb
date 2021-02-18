@@ -1,2 +1,12 @@
 <h1>Welcome, <%= params[:first_name].capitalize() %>!</h1>
+
 <p>This is our super gossip website. Cool, isn't it?</p>
+
+<p>Here is our list of gossips:</p>
+  <ul>
+    <% Gossip.all.each do | gossip | %>
+      <li>
+        <%= User.find_by(id: gossip.user_id).first_name %>: <%= gossip.title %><br/>
+      </li>
+    <% end %>
+  </ul>
