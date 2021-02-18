@@ -2,11 +2,14 @@
 
 <p>This is our super gossip website. Cool, isn't it?</p>
 
-<p>Here is our list of gossips:</p>
-  <ul>
+<p>Here are all of our gossips:</p>
+
     <% Gossip.all.each do | gossip | %>
-      <li>
-        <%= User.find_by(id: gossip.user_id).first_name %>: <%= gossip.title %> <%= link_to "View", gossip_path(@id = gossip.id) %><br/>
-      </li>
+      <div class="card text-white bg-info mb-3" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title"><%= User.find_by(id: gossip.user_id).first_name %></h5>
+          <p class="card-text"><%= gossip.title %></p>
+          <span class="btn btn-light"><%= link_to "View", gossip_path(@id = gossip.id) %></span>
+        </div>
+      </div>
     <% end %>
-  </ul>
