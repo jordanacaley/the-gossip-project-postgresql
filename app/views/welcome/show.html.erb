@@ -6,7 +6,7 @@
   <ul>
     <% Gossip.all.each do | gossip | %>
       <li>
-        <%= User.find_by(id: gossip.user_id).first_name %>: <%= gossip.title %><br/>
+        <%= User.find_by(id: gossip.user_id).first_name %>: <%= gossip.title %> <%= link_to "View", gossip_path(@id = gossip.id) %><br/>
       </li>
     <% end %>
   </ul>
