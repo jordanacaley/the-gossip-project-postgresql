@@ -1,7 +1,7 @@
 class GossipController < ApplicationController
   
   def index
-
+    render 'index'
   end
   
   def show
@@ -16,7 +16,15 @@ class GossipController < ApplicationController
   end
 
   def create
-    
+    @gossip = Gossip.new('title' => params[:title],
+                          'content' => params[:content],
+                          'user_id' => 12)
+
+    if @gossip.save 
+      redirect_to gossip_path
+    else
+      render 'new'
+    end    
   end
 
   def edit
