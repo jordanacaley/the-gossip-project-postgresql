@@ -2,4 +2,4 @@
 <p>Description: <%= User.find(params[:id]).description %></p>
 <p>Email: <%= User.find(params[:id]).email %></p>
 <p>Age: <%= User.find(params[:id]).age %></p>
-<p>City: <%= City.find_by(id: User.find(params[:id]).city_id).name %></p>
+<p>City: <%= City.find_by(id: User.find(params[:id]).city_id).name %> <%= link_to "View", city_path(@id = User.find(params[:id]).city_id) %></p>

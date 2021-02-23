@@ -1,0 +1,15 @@
+<h1><%= City.find(params[:id]).name %></h1>
+
+<p>Gossips in this city:</p>
+
+  <div class="row">
+    <% Gossip.where(user_id: User.where(city_id: params[:id])).each do | gossip | %>
+      <div class="card text-white bg-info m-3" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title"><%= User.find_by(id: gossip.user_id).first_name %></h5>
+          <p class="card-text"><%= gossip.title %></p>
+          <span class="btn btn-light"><%= link_to "View", gossip_path(@id = gossip.id) %></span>
+        </div>
+      </div>
+    <% end %>
+  </div>
