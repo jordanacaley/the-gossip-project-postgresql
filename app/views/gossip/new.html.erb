@@ -3,7 +3,7 @@
 
     <%= form_tag url_for(action: 'create'), method: "post" do %>
 
-      <%= hidden_field_tag 'gossip[user_id]', @gossip.user_id = 12 %>
+      <%= hidden_field_tag 'gossip[user_id]', 12 %>
 
       <%= label_tag 'Title' %>
       <%= text_field_tag 'gossip[title]', @gossip.title %>

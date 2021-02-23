@@ -13,15 +13,14 @@ class GossipController < ApplicationController
   end
 
   def create
-    @gossip = Gossip.new(gossip_params)
-    puts @gossip.user_id
-    puts @gossip.title
-    puts @gossip.content
-    if @gossip.save 
-      redirect_to gossip_index_path
-    else
-      render 'new'
-    end    
+    @gossip = Gossip.create(gossip_params)
+    puts @gossip
+    redirect_to gossip_index_path
+    # if @gossip.save 
+    #   redirect_to gossip_index_path
+    # else
+    #   render 'new'
+    # end    
   end
 
   def edit
