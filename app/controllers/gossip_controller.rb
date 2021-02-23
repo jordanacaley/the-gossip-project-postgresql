@@ -30,10 +30,10 @@ class GossipController < ApplicationController
   def update
     @gossip = Gossip.find(params[:id])
 
-    if @gossip.update(params[:gossip].permit(:title, :content))
-      redirect_to gossip_path
+    if @gossip.update(gossip_params)
+      redirect_to @gossip
     else
-      render 'edit'
+      render :edit
     end
   end
 
