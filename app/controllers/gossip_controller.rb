@@ -14,7 +14,7 @@ class GossipController < ApplicationController
 
   def create
     gossip = Gossip.create(gossip_params)
-    redirect_to gossip_path(gossip.id) 
+    redirect_to gossip_index_path
   end
 
   def edit
@@ -31,7 +31,7 @@ class GossipController < ApplicationController
     @gossip = Gossip.find(params[:id])
     @gossip.destroy
 
-    redirect_to gossip_path
+    redirect_to gossip_index_path
   end
 
   private

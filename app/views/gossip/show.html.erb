@@ -3,4 +3,7 @@
 <p>Content: <%= Gossip.find(params[:id]).content %></p>
 <p>Author: <%= User.find_by(id: Gossip.find(params[:id]).user_id).first_name%> <%= link_to "View", user_path(@id = Gossip.find(params[:id]).user_id) %></p>
 <p>City: <%= City.find_by(id: User.find_by(id: Gossip.find(params[:id]).user_id).city_id).name %> <%= link_to "View", city_path(@id = City.find_by(id: User.find_by(id: Gossip.find(params[:id]).user_id).city_id)) %></p>
-<button><%= link_to "Edit", edit_gossip_path %></button>
+
+<%= link_to "Edit gossip", edit_gossip_path %>
+
+<a href="<%= gossip_path(gossip.id) %>" class="btn btn-danger" data-confirm="Are you sure?" data-method="DELETE">Delete gossip</a>
